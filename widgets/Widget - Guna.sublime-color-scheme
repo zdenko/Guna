@@ -2,7 +2,7 @@
 	"name"     : "Guna",
 	"author"   : "poucotm",
 	"variables": {
-		"bgcolor": "#161C23"
+		"bgcolor": "#0e1415"
 	},
 	"globals": {
 		"background": "color(var(bgcolor) l(+ 4%))",
