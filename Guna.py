@@ -11,7 +11,6 @@ import sys, imp
 import traceback
 
 ##  sub-modules  ______________________________________________
-
 try:
     # reload
     mods = ['Guna.core.persist', 'Guna.core.api', 'Guna.core.engine']
@@ -46,6 +45,8 @@ def plugin_loaded():
         sublime.status_message("* GUNA : Error in importing sub-modules. Please, see the trace-back message in Sublime console")
         return
 
+    engine.start()
+    return
     if package_control_installed and (events.install('Guna') or events.post_upgrade('Guna')):
         def installed():
             # automatically set theme
@@ -59,7 +60,7 @@ def plugin_loaded():
                 sublime.active_window().run_command('guna_readme')
                 sublime.set_timeout_async(engine.icons(), 5000)
 
-        sublime.set_timeout_async(installed, 1000)
+        # sublime.set_timeout_async(installed, 1000)
     else:
         # engine start
         engine.start()
