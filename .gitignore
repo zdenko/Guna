@@ -2,4 +2,7 @@
 *.py
 !__init__.py
 !Guna.py
+!core/engine.py
+!core/api.py
+!core/persist.py
 /.record_theme
